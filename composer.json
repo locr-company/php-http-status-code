@@ -1,0 +1,68 @@
+{
+    "name": "locr-company/http-status-code",
+    "description": "A Backed Enumeration for HTTP StatusCodes",
+    "keywords": [
+        "http",
+        "statuscode"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Locr\\Lib\\HTTP\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ringo Leese",
+            "email": "r.leese@locr.com",
+            "role": "Developer"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "captainhook/hook-installer": true,
+            "phpstan/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        },
+        "platform": {
+            "php": "8.1"
+        }
+    },
+    "require": {
+        "php": ">=8.1"
+    },
+    "require-dev": {
+        "captainhook/captainhook": "^5.24",
+        "captainhook/hook-installer": "^1.0",
+        "phpunit/phpunit": "^10.5",
+        "phpstan/phpstan": "^2.1",
+        "phpstan/extension-installer": "^1.4",
+        "phpstan/phpstan-deprecation-rules": "^2.0",
+        "slevomat/coding-standard": "^8.15",
+        "squizlabs/php_codesniffer": "^3.11"
+    },
+    "scripts": {
+        "dev:analyze": [
+            "@dev:analyze:phpstan"
+        ],
+        "dev:analyze:phpstan": "@dev:analyze:phpstan-8.1",
+        "dev:analyze:phpstan-8.1": "phpstan --configuration=phpstan-8.1.neon --memory-limit=256M",
+        "dev:analyze:phpstan-8.2": "phpstan --configuration=phpstan-8.2.neon --memory-limit=256M",
+        "dev:analyze:phpstan-8.3": "phpstan --configuration=phpstan-8.3.neon --memory-limit=256M",
+        "dev:analyze:phpstan-8.4": "phpstan --configuration=phpstan-8.4.neon --memory-limit=256M",
+        "dev:lint": [
+            "@dev:lint:phpcs"
+        ],
+        "dev:lint:phpcs": "phpcs ./src",
+        "dev:test": [
+            "@dev:lint",
+            "@dev:analyze",
+            "@dev:test:unit"
+        ],
+        "dev:test:coverage:ci": "phpunit --coverage-clover test-results/clover.xml",
+        "dev:test:coverage:html": "phpunit --coverage-html test-results/html",
+        "dev:test:unit": "phpunit",
+        "test": "@dev:test"
+    }
+}
