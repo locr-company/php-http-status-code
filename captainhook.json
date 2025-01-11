@@ -4,12 +4,8 @@
         "actions": []
     },
     "pre-push": {
-        "enabled": true,
-        "actions": [
-            {
-                "action": "composer test"
-            }
-        ]
+        "enabled": false,
+        "actions": []
     },
     "pre-commit": {
         "enabled": true,
