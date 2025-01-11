@@ -1,5 +1,6 @@
 ![php](https://img.shields.io/badge/php-%3E%3D%208.1-8892BF.svg)
 [![github_workflow_status](https://img.shields.io/github/actions/workflow/status/locr-company/php-http-status-code/php.yml)](https://github.com/locr-company/php-http-status-code/actions/workflows/php.yml)
+[![codecov](https://codecov.io/gh/locr-company/php-http-status-code/graph/badge.svg?token=SgcH0gb3IG)](https://codecov.io/gh/locr-company/php-http-status-code)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=locr-company_php-http-status-code&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=locr-company_php-http-status-code)
 [![github_tag](https://img.shields.io/github/v/tag/locr-company/php-http-status-code)](https://github.com/locr-company/php-http-status-code/tags)
 [![packagist](https://img.shields.io/packagist/v/locr-company/http-status-code)](https://packagist.org/packages/locr-company/http-status-code)
