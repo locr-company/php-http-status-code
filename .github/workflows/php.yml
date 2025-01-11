@@ -57,9 +57,8 @@ jobs:
       run: composer run-script dev:test:coverage:ci
       if: matrix.version == '8.1'
 
-#    - name: Upload coverage reports to Codecov
-#      uses: codecov/codecov-action@v4
-#      if: matrix.version == '8.1'
-#      with:
-#        token: ${{ secrets.CODECOV_TOKEN }}
-#        slug: locr-company/php-http-status-code
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v5
+      if: matrix.version == '8.1'
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
